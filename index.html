@@ -7,6 +7,9 @@
     <title>Live Code Editor</title>
     <link rel="stylesheet" href="./style.css">
 
+    <!--ramix icon cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600&family=Poppins:wght@200;400;500;600&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
@@ -14,16 +17,19 @@
 <body>
     <div class="container">
         <div class="left">
-            <label>HTML</label>
-            <textarea id="html-code"></textarea> 
+            <label><i class="ri-html5-line"></i> HTML</label>
+            <textarea id="html-code" onkeyup="displayOutput()"></textarea> 
 
-            <label>CSS</label>
-            <textarea id="css-code"></textarea> 
+            <label><i class="ri-css3-line"></i> CSS</label>
+            <textarea id="css-code" onkeyup="displayOutput()"></textarea> 
 
-            <label>JS</label>
-            <textarea id="js-code"></textarea> 
+            <label><i class="ri-code-line"></i> JS</label>
+            <textarea id="js-code" onkeyup="displayOutput()"></textarea> 
         </div>
-        <div class="right"></div>
+        <div class="right">
+            <label><i class="ri-send-plane-2-fill"></i> Output</label>
+            <iframe id="output"></iframe>
+        </div>
     </div>
 
 
